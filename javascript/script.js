@@ -92,3 +92,109 @@
 // for (let key in student) {
 //   console.log(key, student[key]);
 // }
+
+// var length = 15;
+// var width = 20;
+
+// function areaofrect(l, w) {
+//   var a = l * w;
+//   return a;
+// }
+
+// function perimeter(l, w) {
+//   var a = 2 * (l + w);
+//   return a;
+// }
+
+// const area = areaofrect(length, width);
+// console.log(area);
+
+// const peri = perimeter(length, width);
+// console.log(peri);
+
+// function even(n) {
+//   return n % 2 === 0;
+// }
+
+// const res = even(5);
+// console.log(res);
+
+// arr = [1, 2, 3, 4, 5, 6];
+
+// arr.forEach((element) => {
+//   element * 5;
+// });
+
+// console.log(arr);
+
+// let arr = [
+//   { name: "kunal", age: 25, role: "react" },
+//   { name: "fahim", age: 28, role: "react" },
+//   { name: "swati", age: 35, role: "react" },
+//   { name: "abhishek", age: 45, role: "react" },
+// ];
+
+// let ans = arr.map((el, i, arr) => {
+//   return arr[i].age;
+// });
+
+// console.log(ans);
+
+// let res = arr.reduce((acc, curr) => {
+//   return acc + curr.age;
+// }, );
+
+// console.log(res);
+
+// function b() {
+//   c();
+
+//   console.log(a);
+//   function c() {}
+// }
+
+// var a = 10;
+
+// b();
+
+// (function () {
+//   console.log("kunal");
+// })();
+
+// function name(a, callback) {
+//   console.log("kunal");
+//   console.log(a);
+//   console.log(callback);
+//   console.log(callback());
+// }
+
+// function a() {
+//   return 3 * 4;
+// }
+// name("rohan", a);
+
+// function x() {
+//   for (let i = 1; i <= 5; i++) {
+//     function close(i) {
+//       setTimeout(() => {
+//         console.log(i);
+//       }, i * 2000);
+//     }
+
+//     close(i);
+//   }
+//   console.log("hello");
+// }
+
+// x();
+
+// a = [1, 2, 3];
+
+// const [first, second, third, four = 45] = a;
+
+// console.log(first);
+// console.log(second);
+// console.log(third);
+// console.log(four);
+
+console.log(this);
