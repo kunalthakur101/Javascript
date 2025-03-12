@@ -197,4 +197,27 @@
 // console.log(third);
 // console.log(four);
 
-console.log(this);
+// fetch("http://localhost:3000/posts/", {
+//   method: "GET",
+//   headers: { "Content-Type": "application/json" },
+//   // body: JSON.stringify({ title: "manish", views: 1200 }),
+// })
+//   .then((res) => res.json())
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err));
+
+let arr = [
+  { name: "kunal", age: 25, role: "react" },
+  { name: "fahim", age: 28, role: "react" },
+  { name: "swati", age: 35, role: "react" },
+  { name: "abhishek", age: 45, role: "react" },
+];
+
+const res = arr.reduce((arr, curr) => {
+  if (curr.age < 30) {
+    arr.push(curr.name);
+  }
+  return arr;
+}, []);
+
+console.log(res);
