@@ -197,6 +197,40 @@
 // console.log(third);
 // console.log(four);
 
+//-----------------------------------------------------------------------
+// let arr = [
+//   { name: "kunal", age: 25, role: "react" },
+//   { name: "fahim", age: 28, role: "react" },
+//   { name: "swati", age: 35, role: "react" },
+//   { name: "abhishek", age: 45, role: "react" },
+// ];
+
+// const res = arr.reduce((arr, curr) => {
+//   if (curr.age < 30) {
+//     arr.push(curr.name);
+//   }
+//   return arr;
+// }, []);
+
+// console.log(res);
+
+//--------------------------------------------------------
+
+//const p = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("Resolved");
+//   }, 4000);
+
+//   setTimeout(() => {
+//     rej("Error");
+//   }, 6000);
+// });
+
+// console.log(p);
+// p.then((res) => console.log(res)).catch((err) => console.log(err));
+
+//--------------------------------------------------------------------------------
+
 // fetch("http://localhost:3000/posts/", {
 //   method: "GET",
 //   headers: { "Content-Type": "application/json" },
@@ -206,18 +240,41 @@
 //   .then((data) => console.log(data))
 //   .catch((err) => console.log(err));
 
-let arr = [
-  { name: "kunal", age: 25, role: "react" },
-  { name: "fahim", age: 28, role: "react" },
-  { name: "swati", age: 35, role: "react" },
-  { name: "abhishek", age: 45, role: "react" },
-];
+let p = new Promise((res, rej) => {
+  var success = false;
 
-const res = arr.reduce((arr, curr) => {
-  if (curr.age < 30) {
-    arr.push(curr.name);
-  }
-  return arr;
-}, []);
+  setTimeout(() => {
+    if (success) {
+      res("Resolved");
+    } else {
+      rej("Rejected");
+    }
+  }, 4000);
+});
 
-console.log(res);
+let p1 = new Promise((res, rej) => {
+  var success = false;
+
+  setTimeout(() => {
+    if (success) {
+      res("Resolved");
+    } else {
+      rej("Rejected");
+    }
+  }, 5000);
+});
+let p2 = new Promise((res, rej) => {
+  var success = false;
+
+  setTimeout(() => {
+    if (success) {
+      res("Resolved");
+    } else {
+      rej("Rejected");
+    }
+  }, 2000);
+});
+
+Promise.any([p, p1, p2])
+  .then((resp) => console.log(resp))
+  .catch((err) => console.log(err));
