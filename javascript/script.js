@@ -240,41 +240,45 @@
 //   .then((data) => console.log(data))
 //   .catch((err) => console.log(err));
 
-let p = new Promise((res, rej) => {
-  var success = false;
+// -----------------------------------------------------------------------------
 
-  setTimeout(() => {
-    if (success) {
-      res("Resolved");
-    } else {
-      rej("Rejected");
-    }
-  }, 4000);
-});
+// let p = new Promise((res, rej) => {
+//   var success = false;
 
-let p1 = new Promise((res, rej) => {
-  var success = false;
+//   setTimeout(() => {
+//     if (success) {
+//       res("Resolved");
+//     } else {
+//       rej("Rejected");
+//     }
+//   }, 4000);
+// });
 
-  setTimeout(() => {
-    if (success) {
-      res("Resolved");
-    } else {
-      rej("Rejected");
-    }
-  }, 5000);
-});
-let p2 = new Promise((res, rej) => {
-  var success = false;
+// let p1 = new Promise((res, rej) => {
+//   var success = false;
 
-  setTimeout(() => {
-    if (success) {
-      res("Resolved");
-    } else {
-      rej("Rejected");
-    }
-  }, 2000);
-});
+//   setTimeout(() => {
+//     if (success) {
+//       res("Resolved");
+//     } else {
+//       rej("Rejected");
+//     }
+//   }, 5000);
+// });
+// let p2 = new Promise((res, rej) => {
+//   var success = false;
 
-Promise.any([p, p1, p2])
-  .then((resp) => console.log(resp))
-  .catch((err) => console.log(err));
+//   setTimeout(() => {
+//     if (success) {
+//       res("Resolved");
+//     } else {
+//       rej("Rejected");
+//     }
+//   }, 2000);
+// });
+
+// Promise.any([p, p1, p2])
+//   .then((resp) => console.log(resp))
+//   .catch((err) => console.log(err));
+
+// ----------------------------------------------------
