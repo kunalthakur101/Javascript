@@ -282,3 +282,33 @@
 //   .catch((err) => console.log(err));
 
 // ----------------------------------------------------
+
+//DOM MANIPULATION
+
+// let btn = document.querySelector("#click");
+// let p = document.querySelector("#p");
+
+// btn.addEventListener("click", (e) => {
+//   if (p.style.display === "none") {
+//     p.style.display = "block";
+//   } else {
+//     p.style.display = "none";
+//   }
+// });
+
+let btn = document.getElementById("btn");
+let parent = document.getElementById("container");
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+  let age = document.getElementById("age");
+  let city = document.getElementById("city");
+
+  let newel = document.createElement("ul");
+
+  newel.innerHTML = `<li>${name.value} </li><button>del</button> <li> ${email.value} </li> <li> ${age.value}</li> <li> ${city.value} </li>`;
+
+  parent.append(newel);
+});

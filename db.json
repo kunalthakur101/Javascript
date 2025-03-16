@@ -1,11 +1,42 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "474a",
+      "title": "venom",
+      "views": 800
+    },
+    {
+      "id": "f565",
+      "title": "rahul",
+      "views": 500
+    },
+    {
+      "id": "8c08",
+      "title": "manish",
+      "views": 700
+    },
+    {
+      "id": "006d",
+      "title": "manish",
+      "views": 10000
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
   ],
   "profile": {
     "name": "typicode"
