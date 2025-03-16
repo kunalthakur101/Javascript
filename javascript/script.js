@@ -296,19 +296,22 @@
 //   }
 // });
 
-let btn = document.getElementById("btn");
-let parent = document.getElementById("container");
+// let btn = document.getElementById("btn");
+// let parent = document.getElementById("container");
 
-btn.addEventListener("click", (e) => {
-  e.preventDefault();
-  let name = document.getElementById("name");
-  let email = document.getElementById("email");
-  let age = document.getElementById("age");
-  let city = document.getElementById("city");
+// btn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   let name = document.getElementById("name");
+//   let email = document.getElementById("email");
+//   let age = document.getElementById("age");
+//   let city = document.getElementById("city");
 
-  let newel = document.createElement("ul");
+//   let newel = document.createElement("ul");
 
-  newel.innerHTML = `<li>${name.value} </li><button>del</button> <li> ${email.value} </li> <li> ${age.value}</li> <li> ${city.value} </li>`;
+//   newel.innerHTML = `<li>${name.value} </li><button>del</button>
+//   <li> ${email.value}
+//   </li> <li> ${age.value}</li>
+//   <li> ${city.value} </li>`;
 
-  parent.append(newel);
-});
+//   parent.append(newel);
+// });
