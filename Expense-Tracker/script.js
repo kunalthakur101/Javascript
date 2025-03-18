@@ -3,6 +3,15 @@ const expenseName = document.getElementById("expense-name");
 const expenseAmount = document.getElementById("expense-amount");
 const expenseList = document.getElementById("expense-list");
 const totalExpenseDisplay = document.getElementById("total-expense");
+const expenseChart = document.getElementById("expenseChart").getContext("2d");
+
+const expenseDate = document.getElementById("expense-date");
+
+const filterDateInput = document.getElementById("filter-date");
+const filterBtn = document.getElementById("filter-btn");
+
+let expenses = []; // Store all expenses in an array
+let chart;
 
 expenseForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -10,6 +19,7 @@ expenseForm.addEventListener("submit", (e) => {
   let newExpense = {
     name: expenseName.value,
     amount: expenseAmount.value,
+    date: expenseDate.value,
   };
 
   fetch("http://localhost:3000/expenses", {
@@ -24,6 +34,7 @@ expenseForm.addEventListener("submit", (e) => {
       fetchdetails(); // Refresh the expense list
       expenseName.value = "";
       expenseAmount.value = "";
+      expenseDate.value = "";
     })
     .catch((err) => console.error(err));
 });
@@ -34,8 +45,10 @@ function fetchdetails() {
   fetch("http://localhost:3000/expenses")
     .then((resp) => resp.json())
     .then((data) => {
+      expenses = data;
       displayExpenses(data);
       calculateTotal(data);
+      updateChart(data);
     })
     .catch((err) => console.log(err));
 }
@@ -45,7 +58,9 @@ function displayExpenses(expenses) {
   expenses.forEach((expense) => {
     let li = document.createElement("li");
 
-    li.textContent = `${expense.name} : ₹${expense.amount}`;
+    li.textContent = `${expense.name} : ₹${expense.amount} on ${new Date(
+      expense.date
+    ).toLocaleDateString()}`;
 
     let container = document.createElement("div");
 
@@ -139,3 +154,92 @@ function editExpense(expense, li) {
       .catch((err) => console.error("Error updating expense:", err));
   }
 }
+
+function updateChart(expenses) {
+  // Group expenses by category or create custom categories
+  const categoryTotals = {};
+
+  expenses.forEach((expense) => {
+    if (categoryTotals[expense.name]) {
+      categoryTotals[expense.name] += Number(expense.amount);
+    } else {
+      categoryTotals[expense.name] = Number(expense.amount);
+    }
+  });
+
+  // Create chart data from the grouped totals
+  const labels = Object.keys(categoryTotals);
+  const data = Object.values(categoryTotals);
+
+  const backgroundColors = data.map(() => getRandomColor());
+
+  // Destroy previous chart if exists
+  if (chart) {
+    chart.destroy();
+  }
+
+  // Create a new chart
+  chart = new Chart(expenseChart, {
+    type: "doughnut",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Amount Spent per Category",
+          data: data,
+          backgroundColor: backgroundColors,
+          borderColor: backgroundColors,
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+}
+
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+filterBtn.addEventListener("click", () => {
+  const selectedDate = filterDateInput.value;
+
+  if (selectedDate) {
+    const filteredExpenses = expenses.filter((expense) => {
+      // Ensure the date is in the correct format (YYYY-MM-DD)
+      const expenseDate = expense.date
+        ? new Date(expense.date).toISOString().split("T")[0]
+        : null;
+
+      // Check if the date is valid
+      if (isNaN(new Date(expenseDate))) {
+        console.error("Invalid date:", expenseDate);
+        return false; // Skip invalid dates
+      }
+
+      // Compare the selected date with the expense date
+      return expenseDate === selectedDate;
+    });
+
+    displayExpenses(filteredExpenses);
+    calculateTotal(filteredExpenses);
+    updateChart(filteredExpenses);
+  } else {
+    // If no date is selected, show all expenses
+    displayExpenses(expenses);
+    calculateTotal(expenses);
+    updateChart(expenses);
+  }
+});

@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>Expense Tracker</h1>
+
+      <div class="date">
+        <div class="div">
+          <label for="filter-date">Filter by Date:</label>
+          <input type="date" id="filter-date" />
+        </div>
+        <button id="filter-btn">Filter</button>
+      </div>
+
       <form id="expense-tracker-form">
         <input
           type="text"
@@ -22,12 +32,17 @@
           placeholder="Amount"
           required
         />
+        <input type="date" id="expense-date" required />
         <button type="submit">Add</button>
       </form>
 
       <h2>Total Expense <span id="total-expense"> &#8377;0</span></h2>
 
       <ul id="expense-list"></ul>
+    </div>
+
+    <div class="container2">
+      <canvas id="expenseChart" width="400" height="200"></canvas>
     </div>
 
     <script src="script.js"></script>

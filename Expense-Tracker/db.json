@@ -1,14 +1,3 @@
 {
-  "expenses": [
-    {
-      "id": "ec3c",
-      "name": "movie",
-      "amount": "1000"
-    },
-    {
-      "id": "f5e3",
-      "name": "shopping",
-      "amount": "200"
-    }
-  ]
+  "expenses": []
 }
