@@ -1,8 +1,20 @@
 {
   "expenses": [
     {
-      "id": "6690",
-      "name": "shopping",
+      "id": "a6e8",
+      "name": "food",
+      "amount": "500",
+      "date": "2025-03-19"
+    },
+    {
+      "id": "53c1",
+      "name": "kunal",
+      "amount": "600",
+      "date": "2025-03-20"
+    },
+    {
+      "id": "07c9",
+      "name": "movie",
       "amount": "200",
       "date": "2025-03-19"
     }
