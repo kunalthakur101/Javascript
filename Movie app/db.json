@@ -1,0 +1,137 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Interstellar",
+      "year": "2021",
+      "genre": "Sci-Fi",
+      "poster": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-09/19/full/1726748235-0061.png?im=FitAndFill=(826,465)"
+    },
+    {
+      "id": "2",
+      "title": "The Matrix",
+      "year": "1999",
+      "genre": "Sci-Fi",
+      "poster": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411"
+    },
+    {
+      "id": "3",
+      "title": "Avatar",
+      "year": "2009",
+      "genre": "Action",
+      "poster": "https://img.freepik.com/free-psd/music-shop-poster-template_23-2148855476.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Inception",
+      "year": "2010",
+      "genre": "Sci-Fi",
+      "poster": "https://rukminim2.flixcart.com/image/850/1000/jt8yxe80/poster/e/w/k/medium-wonder-wom11-woman-movie-poster-original-imafem3hvgkhfvuj.jpeg?q=20&crop=false"
+    },
+    {
+      "id": "6",
+      "title": "Gravity",
+      "year": "2013",
+      "genre": "Sci-Fi",
+      "poster": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-09/19/full/1726748235-0061.png?im=FitAndFill=(826,465)"
+    },
+    {
+      "id": "8",
+      "title": "The Avengers",
+      "year": "2012",
+      "genre": "Action",
+      "poster": "https://img.freepik.com/free-psd/music-shop-poster-template_23-2148855476.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Star Wars: The Force Awakens",
+      "year": "2015",
+      "genre": "Sci-Fi",
+      "poster": "https://m.media-amazon.com/images/I/71uoicxpqoS.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Jurassic Park",
+      "year": "1993",
+      "genre": "Adventure",
+      "poster": "https://rukminim2.flixcart.com/image/850/1000/jt8yxe80/poster/e/w/k/medium-wonder-wom11-woman-movie-poster-original-imafem3hvgkhfvuj.jpeg?q=20&crop=false"
+    },
+    {
+      "id": "11",
+      "title": "Titanic",
+      "year": "1997",
+      "genre": "Drama",
+      "poster": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-09/19/full/1726748235-0061.png?im=FitAndFill=(826,465)"
+    },
+    {
+      "id": "12",
+      "title": "The Dark Knight",
+      "year": "2008",
+      "genre": "Action",
+      "poster": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411"
+    },
+    {
+      "id": "13",
+      "title": "The Lion King",
+      "year": "1994",
+      "genre": "Animation",
+      "poster": "https://img.freepik.com/free-psd/music-shop-poster-template_23-2148855476.jpg"
+    },
+    {
+      "id": "14",
+      "title": "The Godfather",
+      "year": "1972",
+      "genre": "Crime",
+      "poster": "https://m.media-amazon.com/images/I/71uoicxpqoS.jpg"
+    },
+    {
+      "id": "15",
+      "title": "Jurassic World",
+      "year": "2015",
+      "genre": "Adventure",
+      "poster": "https://rukminim2.flixcart.com/image/850/1000/jt8yxe80/poster/e/w/k/medium-wonder-wom11-woman-movie-poster-original-imafem3hvgkhfvuj.jpeg?q=20&crop=false"
+    },
+    {
+      "id": "16",
+      "title": "Frozen",
+      "year": "2013",
+      "genre": "Animation",
+      "poster": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-09/19/full/1726748235-0061.png?im=FitAndFill=(826,465)"
+    },
+    {
+      "id": "17",
+      "title": "Wonder Woman",
+      "year": "2017",
+      "genre": "Action",
+      "poster": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/adventure-movie-poster-template-design-7b13ea2ab6f64c1ec9e1bb473f345547_screen.jpg?ts=1636999411"
+    },
+    {
+      "id": "18",
+      "title": "The Hunger Games",
+      "year": "2012",
+      "genre": "Action",
+      "poster": "https://img.freepik.com/free-psd/music-shop-poster-template_23-2148855476.jpg"
+    },
+    {
+      "id": "19",
+      "title": "Mad Max: Fury Road",
+      "year": "2015",
+      "genre": "Action",
+      "poster": "https://m.media-amazon.com/images/I/71uoicxpqoS.jpg"
+    },
+    {
+      "id": "20",
+      "title": "Doctor Strange",
+      "year": "2016",
+      "genre": "Action",
+      "poster": "https://rukminim2.flixcart.com/image/850/1000/jt8yxe80/poster/e/w/k/medium-wonder-wom11-woman-movie-poster-original-imafem3hvgkhfvuj.jpeg?q=20&crop=false"
+    },
+    {
+      "id": "9c90",
+      "title": "test2",
+      "year": "2025",
+      "genre": "rom",
+      "poster": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/action-movie-poster-template-design-0f5fff6262fdefb855e3a9a3f0fdd361_screen.jpg?ts=1700270983"
+    }
+  ]
+}

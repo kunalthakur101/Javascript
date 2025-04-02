@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <h1>Movie App</h1>
+      <input
+        type="text"
+        placeholder="Search movies...."
+        id="search"
+        oninput="searchMovies()"
+      />
+      <select onchange="sortmoviesbygenre()" id="sortbygenre">
+        <option value="">Sort by Genre</option>
+        <option value="asc">Genre ascending</option>
+        <option value="desc">Genre descending</option>
+      </select>
+      <select onchange="sortmovies()" id="sort">
+        <option value="">Sort by Year</option>
+        <option value="asc">Year ascending</option>
+        <option value="desc">Year descending</option>
+      </select>
+
+    </div>
+    <!-- sub header -->
+    <div class="sub-header">
+      <p>Movies: <span id="counter">0</span></p>
+      <button onclick="showmodal()">+ Add Movie</button>
+    </div>
+
+    <!-- Movies container -->
+    <div id="movie-list"></div>
+
+    <div id="movie-model">
+      
+      <div class="model-content">
+        <div class="close-container">
+          <div class="close" onclick="closemodal()">&#10006</div>
+        </div>
+        
+        <h2>Add New Movie</h2>
+        
+        <form id="movie-form">
+          <input id="movie-title"type="text" placeholder="Title" />
+          <input id="movie-year"type="text" placeholder="Year" />
+          <input id="movie-genre"type="text" placeholder="Genre" />
+          <input id="movie-poster"type="text" placeholder="Poster Url" />
+          <button class="submit" type="submit">Add Movie</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="movie-pages">
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
