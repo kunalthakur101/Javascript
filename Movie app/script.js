@@ -92,7 +92,7 @@ async function deletemovie(id) {
 async function sortmovies() {
   let sortby = document.getElementById("sort").value;
 
-  let res = await fetch(API_URL);
+  let res = await fetch(`${API_URL}?_page=${page}&_per_page=${perpage}`);
 
   let data = await res.json();
 
