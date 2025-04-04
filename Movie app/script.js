@@ -77,7 +77,7 @@ function updatepaginationbutton() {
   document.getElementById("nextbtn").disabled = currentpage === totalpages;
   document.getElementById(
     "pageindicator"
-  ).textContent = `Page ${currentpage} of ${totalpages} `;
+  ).textContent = `${currentpage} of ${totalpages} `;
 }
 
 // delete movie
@@ -88,38 +88,38 @@ async function deletemovie(id) {
   });
 }
 
-// sort movies
+// sort movies by year
 async function sortmovies() {
   let sortby = document.getElementById("sort").value;
 
-  let res = await fetch(`${API_URL}?_page=${page}&_per_page=${perpage}`);
+  let res = await fetch(`${API_URL}?_page=${currentpage}&_per_page=${perpage}`);
 
-  let data = await res.json();
+  let movies = await res.json();
 
   if (sortby === "asc") {
-    data.sort((a, b) => a.year - b.year);
+    movies.data.sort((a, b) => a.year - b.year);
   } else if (sortby === "desc") {
-    data.sort((a, b) => b.year - a.year);
+    movies.data.sort((a, b) => b.year - a.year);
   }
 
-  displayMovies(data);
+  displayMovies(movies.data);
 }
 
 // sort movies by genre
 async function sortmoviesbygenre() {
   let sortby = document.getElementById("sortbygenre").value;
 
-  let res = await fetch(API_URL);
+  let res = await fetch(`${API_URL}?_page=${currentpage}&_per_page=${perpage}`);
 
-  let data = await res.json();
+  let movies = await res.json();
 
   if (sortby === "asc") {
-    data.sort((a, b) => a.genre.localeCompare(b.genre));
+    movies.data.sort((a, b) => a.genre.localeCompare(b.genre));
   } else if (sortby === "desc") {
-    data.sort((a, b) => b.genre.localeCompare(a.genre));
+    movies.data.sort((a, b) => b.genre.localeCompare(a.genre));
   }
 
-  displayMovies(data);
+  displayMovies(movies.data);
 }
 
 // search movies
@@ -169,3 +169,25 @@ document
 
     console.log(res);
   });
+
+// logout button
+
+let logout = document.getElementById("logout-btn");
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("isloggedin");
+
+  window.location.href = "login.html";
+});
+
+// login access
+
+window.addEventListener("DOMContentLoaded", () => {
+  // Check if the user is logged in by reading localStorage
+  let isLoggedIn = JSON.parse(localStorage.getItem("isloggedin"));
+
+  // If 'isloggedin' is not true, redirect to the login page
+  if (!isLoggedIn || isLoggedIn === false) {
+    window.location.href = "login.html";
+  }
+});
