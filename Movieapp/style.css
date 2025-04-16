@@ -24,15 +24,33 @@ body {
 }
 
 #search {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   padding: 8px;
   border-radius: 15px;
   border: none;
 }
 
+select {
+  border: none;
+  padding: 5px 15px;
+  width: 9%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
 .select {
   padding: 8px;
+}
+
+#logout-btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: rgb(236, 95, 95);
+  border: none;
+  border-radius: 20px;
+  color: white;
 }
 
 /* sub header */
@@ -48,9 +66,9 @@ body {
 
 .sub-header button {
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
-  background-color: purple;
+  background-color: rgb(61, 121, 241);
   color: white;
   cursor: pointer;
 }
@@ -175,9 +193,33 @@ body {
 
 .submit {
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
-  background-color: purple;
+  background-color: rgb(61, 121, 241);
   color: white;
   cursor: pointer;
+}
+
+/* button */
+
+.pagination {
+  margin-top: 20px;
+}
+
+#nextbtn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: rgb(61, 121, 241);
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+#prevbtn {
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: rgb(61, 121, 241);
+  border: none;
+  border-radius: 20px;
+  color: white;
 }

@@ -1,0 +1,9 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+  background-color: azure;
+  margin: 20px;
+  border-radius: 20px;
+}

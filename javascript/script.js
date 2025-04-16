@@ -315,3 +315,69 @@
 
 //   parent.append(newel);
 // });
+
+//---------------------------------------------------------------------------------
+
+// call- apply-bind
+
+// let obj = {
+//   name: "rohan",
+// };
+
+// let obj2 = {
+//   name: "rohit",
+// };
+
+// function greet(city, city2) {
+//   console.log(`hello this is ${this.name} from ${city} or ${city2}`);
+// }
+
+// greet.apply(obj2, ["Mumbai", "thane"]);
+
+// let value = greet.bind(obj, "pune", "thane");
+
+// value();
+
+// ------------------------------------------------------------
+
+//settimeout and set interval
+
+// setTimeout(() => {
+//   console.log("hello world");
+// }, 2000);
+
+// setInterval(() => {
+//   console.log("hello world");
+
+//--------------------------------------------------------------------
+// }, 2000);
+
+// debouncing
+
+// let searchinput = document.getElementById("search");
+// function debounce(func, delay) {
+//   let timer;
+//   return function () {
+//     clearTimeout(timer);
+//     timer = setTimeout(func, delay);
+//   };
+// }
+
+// function searchvalue() {
+//   console.log(searchinput.value);
+// }
+
+// searchinput.addEventListener("input", debounce(searchvalue, 500));
+
+// throttling
+
+// function throttle(func, delay) {
+//   let lasttime = 0;
+//   return function () {
+//     let now = Date.now();
+//     if (now - lasttime >= delay) {
+//       lasttime = now;
+//       func();
+//     }
+//   };
+// }

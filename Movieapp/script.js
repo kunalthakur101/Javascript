@@ -53,9 +53,9 @@ fetchmovies();
 
 document.getElementById("movie-pages").innerHTML = `
 <div class = "pagination">
-<button id= "prevbtn" onClick="prevPage()">previous</button>
-<span id="pageindicator">Pages ${totalpages}</span>
-<button id="nextbtn" onClick="nextPage()">next</button>
+<button id= "prevbtn" onClick="prevPage()">Prev</button>
+<span id="pageindicator">${totalpages}</span>
+<button id="nextbtn" onClick="nextPage()">Next</button>
 `;
 
 function nextPage() {
